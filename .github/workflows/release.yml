@@ -9,6 +9,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Разрешение на запись в репозиторий
+      packages: write  # Разрешение на работу с пакетами
+      actions: read  
     steps:
       - uses: actions/checkout@v2
         with:
